@@ -1,0 +1,237 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+body {
+    background-image: radial-gradient(circle, rgba(36,39,43,1) 0%, rgba(7,7,10,1) 100%);
+    background-attachment: fixed;
+    color: #D8CBC7;
+    font-family: "JetBrains Mono",monospace;
+    font-size: 18px;
+}
+
+@media all and (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+.site_section {
+    margin-top: 50px;
+}
+
+#question_section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#question_text {
+    height: 150px;
+    padding: 5%;
+    border: #4A525A 2px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button_class {
+    align-items: center;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    transition: box-shadow .15s,transform .15s;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.button_class:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button_class:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button_class:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+#guess_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_field {
+    border: 2px solid #4A525A;
+    border-radius: 5px;
+    height: 40px;
+    width: 30%;
+    background-color: transparent;
+    margin-right: 1%;
+    color: inherit;
+    font-size: inherit;
+    padding-left: 2%;
+}
+
+.text_field:hover {
+    border-color: #D6D6E7;
+}
+
+.text_field:focus {
+    border-color: #D6D6E7;
+    outline: none;
+}
+
+#guess_button {
+    width: 10%;
+}
+
+#highlow_section {
+    width: 65%;
+    border: #24272B 2px solid;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.highlow_entry_high {
+    border-color: #E4572E;
+    color: #E4572E;
+    background-color: #E4582E15;
+}
+
+.highlow_entry_low {
+    border-color: #004BA8;
+    color: #004BA8;
+    background-color: #004BA815;
+}
+
+.highlow_entry_correct {
+    border-color: #71B340;
+    color: #71B340;
+    background-color: #71B34015;
+}
+
+.highlow_entry {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 2px solid;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.2em;
+}
+
+#pokemon_section {
+    margin-top: 10%;
+}
+
+.title {
+    font-size: 2em;
+    text-align: center;
+}
+
+#pokemon_image_div {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    border: #4A525A 2px solid;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    display: grid;
+    place-items: center;
+}
+
+#pokemon_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pokemon_search_div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+#search_button {
+    width: 10%;
+}
+
+.fade_in {
+    opacity: 0;
+    animation: fadeIn 0.2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.wiggle_animation {
+    animation: wiggle 0.5s ease-in-out forwards;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.win_flash {
+    animation: flash 0.15s infinite;
+}
+
+@keyframes flash {
+    0% {
+      border-color: #FFC857;
+      color: #FFC857;
+    }
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: #FFC857;
+      color: #FFC857;
+    }
+  }
+  
+  

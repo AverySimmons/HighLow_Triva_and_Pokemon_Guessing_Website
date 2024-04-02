@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HighLow Trivia / Pokemon Search</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="data.js" defer></script>
+        <script src="logic.js" defer></script>
+    </head>
+    <body>
+        <p class="title">Number Trivia</p>
+        <div id="question_section" class="site_section">
+            <button id="new_question_button" class="button_class">New Question</button>
+            <p id="question_text"></p>
+        </div>
+        <div id="guess_section" class="site_section">
+            <input type="number" id="guess_field" class="text_field" placeholder="Guess a number! (0 - 9999)">
+            <button id="guess_button" class="button_class">Guess</button>
+        </div>
+        <div id="highlow_section" class="site_section"></div>
+        <div id="stats_section" class="site_section">
+            <p id="stat_count">Completed: </p>
+            <p id="stat_average">Average Guesses: </p>
+        </div>
+
+        <div id="pokemon_section" class="site_section">
+            <p id="pokemon_title" class="title">Pokemon Search</p>
+            <div id="pokemon_image_div">
+                <img id="pokemon_image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
+            </div>
+            <div id="pokemon_search_div">
+                <input type="text" id="search_field" class="text_field" placeholder="Enter a Pokemon!">
+                <button id="search_button" class="button_class">Search</button>
+            </div>
+        </div>
+    </body>
+</html>
